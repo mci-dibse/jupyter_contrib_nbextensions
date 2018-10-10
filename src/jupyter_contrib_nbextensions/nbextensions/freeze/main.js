@@ -160,7 +160,7 @@ define([
     }
 
     function load_extension () {
-        Jupyter.toolbar.add_buttons_group([
+        /*Jupyter.toolbar.add_buttons_group([
             Jupyter.keyboard_manager.actions.register ({
                 help : 'lift restrictions from selected cells',
                 icon : 'fa-unlock-alt',
@@ -176,7 +176,7 @@ define([
                 icon : 'fa-asterisk',
                 handler : make_frozen_selected
             }, 'freeze-cells', mod_name)
-        ]);
+        ]);*/
 
         patch_CodeCell_execute();
         patch_MarkdownCell_unrender();
