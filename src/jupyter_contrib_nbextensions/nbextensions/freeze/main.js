@@ -160,23 +160,6 @@ define([
     }
 
     function load_extension () {
-        Jupyter.toolbar.add_buttons_group([
-            Jupyter.keyboard_manager.actions.register ({
-                help : 'lift restrictions from selected cells',
-                icon : 'fa-unlock-alt',
-                handler : make_normal_selected
-            }, 'make-cells-normal', mod_name),
-            Jupyter.keyboard_manager.actions.register({
-                help : 'make selected cells read-only',
-                icon: 'fa-lock',
-                handler : make_read_only_selected
-            }, 'make-cells-read-only', mod_name),
-            Jupyter.keyboard_manager.actions.register({
-                help : 'freeze selected cells',
-                icon : 'fa-asterisk',
-                handler : make_frozen_selected
-            }, 'freeze-cells', mod_name)
-        ]);
 
         patch_CodeCell_execute();
         patch_MarkdownCell_unrender();
